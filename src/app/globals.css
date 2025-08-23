@@ -48,3 +48,9 @@ body {
     @apply font-bold;
   }
 }
+
+@media (min-width: 768px) {
+  ul {
+    clip-path: none !important;
+  }
+}
