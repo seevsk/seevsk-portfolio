@@ -1,44 +1,53 @@
 import {
-  Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { svgs } from "../assets";
+import React from "react";
+import { CarouselAutoplay } from "../tech-carousel/components/CarouselAutoplay";
 
 export const Carousels = () => {
+  const iconsCarousel = [
+    { src: svgs.java, alt: "java-svg" },
+    { src: svgs.js, alt: "js-svg" },
+    { src: svgs.figma, alt: "figma-svg" },
+    { src: svgs.kotlin, alt: "kotlin-svg" },
+    { src: svgs.mysql, alt: "mysql-svg" },
+    { src: svgs.php, alt: "php-svg" },
+    { src: svgs.sqlserver, alt: "sqlserver-svg" },
+    { src: svgs.tailwind, alt: "tailwind-svg" },
+    { src: svgs.ts, alt: "ts-svg" },
+  ];
+
   return (
     <>
-      <Carousel className="relative z-10">
-        <CarouselContent>
-          <CarouselItem className="basis-1/3">
-            <Image
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              alt="Imagen 3"
-              className="aspect-square object-cover"
-              width={1280}
-              height={720}
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <Image
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              alt="Imagen 3"
-              className="aspect-square object-cover"
-              width={1280}
-              height={720}
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <Image
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              alt="Imagen 3"
-              className="aspect-square object-cover"
-              width={1280}
-              height={720}
-            />
-          </CarouselItem>
-        </CarouselContent>
-      </Carousel>
+      <CarouselAutoplay
+        opts={{ loop: true, align: "center", containScroll: "trimSnaps" }}
+      >
+        <CarouselPrevious className="relative left-2" />
+        <div className="flex-1 overflow-hidden">
+          <CarouselContent className="px-0 w-full ml-0">
+            {iconsCarousel.map(({ src, alt }) => (
+              <CarouselItem
+                className="basis-1/3 flex items-center justify-center"
+                key={alt}
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  className="object-cover"
+                  width={1280}
+                  height={720}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </div>
+        <CarouselNext className="relative right-2" />
+      </CarouselAutoplay>
     </>
   );
 };
