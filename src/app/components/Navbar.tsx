@@ -12,7 +12,7 @@ export const Navbar = () => {
         ></label>
         <ul
           className="fixed tracking-widest top-0 left-0 h-full w-[85%] bg-[#f8f9fa] text-slate-900 px-[6%] font-semibold grid auto-rows-max content-start justify-items-start pt-[100px] space-y-4 clip-square-0 peer-checked/menu:[clip-path:inset(0_10_0_0)]
-        md:relative md:grid-flow-col md:pt-2 md:px-0 md:bg-transparent md:text-[#f8f9fa] md:content-center md:mx-auto md:justify-center md:items-center md:gap-7 md:w-full md:text-lg z-20"
+        md:relative md:grid-flow-col md:pt-2 md:px-0 md:bg-transparent md:text-[#f8f9fa] md:content-center md:mx-auto md:justify-center md:items-center md:gap-7 md:w-full md:text-[16.3px] z-20"
         >
           <li>
             <Link href="#home">{"// Inicio"}</Link>
