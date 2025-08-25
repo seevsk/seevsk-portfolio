@@ -5,23 +5,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import { svgs } from "../assets";
 import React from "react";
 import { CarouselAutoplay } from "../tech-client/components/CarouselAutoplay";
+import { iconsCarousel } from "@/data/iconsCarousel";
 
 export const Carousels = () => {
-  const iconsCarousel = [
-    { src: svgs.java, alt: "java-svg" },
-    { src: svgs.js, alt: "js-svg" },
-    { src: svgs.figma, alt: "figma-svg" },
-    { src: svgs.kotlin, alt: "kotlin-svg" },
-    { src: svgs.mysql, alt: "mysql-svg" },
-    { src: svgs.php, alt: "php-svg" },
-    { src: svgs.sqlserver, alt: "sqlserver-svg" },
-    { src: svgs.tailwind, alt: "tailwind-svg" },
-    { src: svgs.ts, alt: "ts-svg" },
-  ];
-
   return (
     <>
       <CarouselAutoplay

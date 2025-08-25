@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
+import { Main } from "./components/Main";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -63,6 +64,7 @@ export default function RootLayout({
       >
         <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl md:w-[95%]">
           <Header />
+          <Main />
           {children}
         </div>
       </body>
