@@ -62,7 +62,10 @@ export default function RootLayout({
         className={`${poppins.variable} ${inter.variable} antialiased
       `}
       >
-        <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl md:w-[95%]">
+        <div
+          className="w-[90%] mx-auto overflow-hidden max-w-screen-xl 
+        md:w-[95%]"
+        >
           <Header />
           <Main />
           {children}
