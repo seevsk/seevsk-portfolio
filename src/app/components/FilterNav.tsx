@@ -10,12 +10,11 @@ export const FilterNav = () => {
       lg:max-w-[970px]"
       >
         <ul
-          className="flex flex-wrap font-sans font-extrabold text-[16.5px] text-left
-        space-x-4 tracking-[0.5px]
-        sm:flex-nowrap 
-        md:text-[17px] md:tracking-[0.7px]
-        lg:text-lg lg:tracking-[0.9px]
-        "
+          className="flex flex-wrap font-mono font-bold text-[16.5px] text-left
+        space-x-4 tracking-[0.9px] text-[#bcb8b1]
+        sm:flex-nowrap sm:font-bold
+        md:md:tracking-[0.7px] md:font-semibold
+        lg:text-[17px] lg:tracking-[1.1px]"
         >
           <li>
             <Link href="#">Todo</Link>

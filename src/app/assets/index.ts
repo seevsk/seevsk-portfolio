@@ -10,5 +10,6 @@ import ts from './ts.svg';
 import kotlinWB from './kotlin-sk.svg';
 import react from './react.svg';
 import pc from './pc.svg';
+import bgProject from './bg-project.png'
 
-export const svgs = { java, js, figma, kotlin, mysql, php, sqlserver, tailwind, ts, kotlinWB, react, pc };
+export const svgs = { java, js, figma, kotlin, mysql, php, sqlserver, tailwind, ts, kotlinWB, react, pc, bgProject };

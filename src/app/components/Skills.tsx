@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { skills } from "@/data/skils";
+import { skills } from "@/data/skills";
 
 export const Skills = () => {
   return (
