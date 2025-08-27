@@ -34,7 +34,7 @@ export const Projects = () => {
               <Link href="#">
                 <div className="w-full aspect-[12/9]">
                   <Image
-                    className="rounded-t-lg w-full h-full"
+                    className="rounded-t-lg w-full h-full object-cover"
                     src={project.image}
                     alt={project.alt}
                     width={400}
