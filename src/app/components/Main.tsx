@@ -1,13 +1,11 @@
-import { Contact } from "./Contact";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
 
 export const Main = () => {
   return (
-    <main>
+    <main className="w-[90%] mx-auto">
       <Skills />
       <Projects />
-      <Contact />
     </main>
   );
 };

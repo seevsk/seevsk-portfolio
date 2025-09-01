@@ -10,6 +10,9 @@ import ts from './ts.svg';
 import kotlinWB from './kotlin-sk.svg';
 import react from './react.svg';
 import pc from './pc.svg';
-import bgProject from './bg-project.png'
+import marks from './marks.svg';
+import jensenHuang from './JensenHuang.jpg';
+import ferHerrera from './FerHerrera.jpeg';
+import alvaroFelipe from './AlvaroFelipe.jpeg';
 
-export const svgs = { java, js, figma, kotlin, mysql, php, sqlserver, tailwind, ts, kotlinWB, react, pc, bgProject };
+export const svgs = { java, js, figma, kotlin, mysql, php, sqlserver, tailwind, ts, kotlinWB, react, pc, marks, jensenHuang, ferHerrera, alvaroFelipe };

@@ -6,7 +6,11 @@ import { projects } from "@/data/projects";
 export const Projects = () => {
   return (
     <>
-      <section className="max-w-[1200px] mx-auto px-4">
+      <section
+        id="projects"
+        className="max-w-[1200px] mx-auto px-4 mb-14
+       md:min-h-screen"
+      >
         <FilterNav />
 
         <article

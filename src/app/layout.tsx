@@ -3,6 +3,7 @@ import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
+import { Contact } from "./components/Contact";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -62,14 +63,12 @@ export default function RootLayout({
         className={`${poppins.variable} ${inter.variable} antialiased
       `}
       >
-        <div
-          className="w-[90%] mx-auto overflow-hidden max-w-screen-xl 
-        md:w-[95%]"
-        >
+        <div className="mx-auto overflow-hidden max-w-screen-2xl">
           <Header />
           <Main />
           {children}
         </div>
+        <Contact />
       </body>
     </html>
   );

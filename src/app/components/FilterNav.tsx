@@ -6,8 +6,8 @@ export const FilterNav = () => {
       <nav
         className="flex items-center justify-start max-w-sm mx-left
       sm:max-w-[490px]
-      md:max-w-2xl
-      lg:max-w-[970px]"
+      md:max-w-2xl md:pt-25
+      lg:max-w-[970px] lg:pt-30"
       >
         <ul
           className="flex flex-wrap font-mono font-bold text-[16.5px] text-left

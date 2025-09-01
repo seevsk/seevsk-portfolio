@@ -7,13 +7,15 @@ export const Skills = () => {
       id="skills"
       className="py-28 max-w-sm mx-auto
     sm:max-w-[490px]
-    md:max-w-2xl
-    lg:max-w-[970px]"
+    md:max-w-2xl md:min-h-screen
+    lg:max-w-[1070px] lg:min-h-screen"
     >
       <h2
+        id="skills-exp"
         className="text-5xl text-center font-mono font-extrabold tracking-[-0.5px]
       sm:text-6xl sm:tracking-[0.5px]
-      md:sm:tracking-[0px]"
+      md:sm:tracking-[0px] md:pt-28 md:mt-17
+      lg:pt-27"
       >
         Areas de Experiencia
       </h2>

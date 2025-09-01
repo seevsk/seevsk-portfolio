@@ -5,7 +5,8 @@ export const Hero = () => {
   return (
     <>
       <section
-        className="pt-40 pb-16 
+        id="home"
+        className="pt-50 pb-16 w-[95%] mx-auto
         sm:pt-26
         md:flex md:flex-col md:items-center md:justify-center md:min-h-screen md:pt-0"
       >
@@ -26,7 +27,7 @@ export const Hero = () => {
           <h2
             className="text-lg mt-6 font-semibold tracking-widest text-center 
             sm:text-[20px] sm:tracking-[2.3px]
-            md:text-xl md:tracking-[2.5px]
+            md:text-[21px] md:tracking-[2.5px]
             lg:tracking-[2.5px]"
           >
             Desarrollador de Software, Front-end & Aplicaciones
@@ -35,7 +36,7 @@ export const Hero = () => {
         <div
           className="pt-27 max-w-sm mx-auto 
         sm:max-w-lg sm:pt-15
-        md:max-w-[640px] md:pt-30 
+        md:max-w-[640px] md:pt-17 
         lg:max-w-3xl lg:pt-17"
         >
           <h3
