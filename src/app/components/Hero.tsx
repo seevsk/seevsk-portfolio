@@ -8,7 +8,7 @@ export const Hero = () => {
         id="home"
         className="pt-50 pb-16 w-[95%] mx-auto
         sm:pt-26
-        md:flex md:flex-col md:items-center md:justify-center md:min-h-screen md:pt-0"
+        md:flex md:flex-col md:items-center md:justify-center h-screen md:pt-0"
       >
         <article
           className="uppercase text-center font-mono w-[100%] max-w-sm mx-auto
