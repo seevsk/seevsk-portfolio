@@ -1,11 +1,19 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const Navbar = () => {
-  const [fixed, setFixed] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [fixed, setFixed] = useState(!isHome);
 
   useEffect(() => {
+    if (!isHome) {
+      setFixed(true);
+      return;
+    }
+
     const skills = document.getElementById("skills");
     if (!skills) return;
 
@@ -21,7 +29,7 @@ export const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [isHome]);
   return (
     <>
       <nav
@@ -37,7 +45,7 @@ export const Navbar = () => {
         <label
           htmlFor="menu"
           className="w-10 h-10 i-open-menu cursor-pointer bg-contain bg-center 
-          bg-transparent rounded-3xl peer-checked/menu:bg-[url('./assets/menu-close.svg')] bg-no-repeat transition-all z-40 md:hidden"
+          bg-transparent rounded-3xl peer-checked/menu:bg-[url('/icons/menu-close.svg')] bg-no-repeat transition-all z-40 md:hidden"
         ></label>
         <ul
           className="fixed tracking-widest top-0 left-0 h-full w-[85%] bg-[#f8f9fa] text-slate-900 px-[6%] font-semibold grid auto-rows-max content-start justify-items-start pt-[100px] space-y-4 space-x-1 clip-square-0 peer-checked/menu:[clip-path:inset(0_10_0_0)]
@@ -45,19 +53,19 @@ export const Navbar = () => {
         lg:text-[18.5px] lg:tracking-[0px] lg:space-x-3 "
         >
           <li className="md:pl-12">
-            <Link href="#home">{"// Inicio"}</Link>
+            <Link href="/#home">{"// Inicio"}</Link>
           </li>
           <li>
-            <Link href="#skills-exp">{"// Capacidades"}</Link>
+            <Link href="/#skills-exp">{"// Capacidades"}</Link>
           </li>
           <li>
-            <Link href="#projects">{"// Proyectos"}</Link>
+            <Link href="/#projects">{"// Proyectos"}</Link>
           </li>
           {/* <li>
             <Link href="#experience">{"// Experiencia"}</Link>
           </li> */}
           <li>
-            <Link href="#contact">{"// Contacto"}</Link>
+            <Link href="/contact">{"// Contacto"}</Link>
           </li>
           <li>
             <p className="py-3 font-light w-[75%] tracking-wide md:hidden">

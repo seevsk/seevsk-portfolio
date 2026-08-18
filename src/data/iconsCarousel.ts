@@ -1,13 +1,11 @@
-import { svgs } from "@/app/assets";
-
 export const iconsCarousel = [
-    { src: svgs.java, alt: "java-svg" },
-    { src: svgs.js, alt: "js-svg" },
-    { src: svgs.figma, alt: "figma-svg" },
-    { src: svgs.kotlin, alt: "kotlin-svg" },
-    { src: svgs.mysql, alt: "mysql-svg" },
-    { src: svgs.php, alt: "php-svg" },
-    { src: svgs.sqlserver, alt: "sqlserver-svg" },
-    { src: svgs.tailwind, alt: "tailwind-svg" },
-    { src: svgs.ts, alt: "ts-svg" },
+    { src: "/icons/java.svg", alt: "java-svg" },
+    { src: "/icons/js.svg", alt: "js-svg" },
+    { src: "/icons/figma.svg", alt: "figma-svg" },
+    { src: "/icons/kotlin.svg", alt: "kotlin-svg" },
+    { src: "/icons/mysql.svg", alt: "mysql-svg" },
+    { src: "/icons/php.svg", alt: "php-svg" },
+    { src: "/icons/sql-server.svg", alt: "sqlserver-svg" },
+    { src: "/icons/tailwind.svg", alt: "tailwind-svg" },
+    { src: "/icons/ts.svg", alt: "ts-svg" },
   ];

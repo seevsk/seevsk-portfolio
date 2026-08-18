@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Contact } from "./components/Contact";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,33 +17,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sebastian Salas - Desarrollador de Software & Aplicaciones",
+  title: "Sebastian Salas | Desarrollador de Software & Aplicaciones Moviles",
   description:
-    "Desarrollador de Software, especializado en Front-end & Aplicaciones Moviles.",
+    "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
   keywords: [
     "Next.js",
     "Tailwind",
     "Portfolio",
     "Portafolio",
     "React",
-    "seevsk",
-    "seevsk.dev",
     "Sebastian Salas",
   ],
   openGraph: {
-    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones",
+    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones Moviles",
     description:
-      "Desarrollador de Software, especializado en Front-end & Aplicaciones Moviles.",
+      "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
     url: "https://seevsk.dev",
     siteName: "Sebastian Salas | seevsk-dev",
-    // images: [
-    //   {
-    //     url: "/og-image.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "icon-tab",
-    //   },
-    // ],
     locale: "es_PE",
     type: "website",
   },
@@ -64,11 +51,8 @@ export default function RootLayout({
       `}
       >
         <div className="mx-auto overflow-hidden max-w-screen-2xl">
-          <Header />
-          <Main />
           {children}
         </div>
-        <Contact />
       </body>
     </html>
   );

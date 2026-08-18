@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { svgs } from "../assets";
 import { inspirations } from "@/data/inspirations";
 
 export const Feedback = () => {
@@ -15,9 +14,9 @@ export const Feedback = () => {
         lg:col-span-1"
         >
           <div className="flex justify-between items-start pb-4 w-[90%] mx-auto">
-            <Image src={svgs.marks} alt="marks-svg" width={60} height={60} />
+            <Image src="/icons/marks.svg" alt="marks-svg" width={60} height={60} />
             <Image
-              src={svgs.jensenHuang}
+              src={jensenHuang.image}
               alt="jensenHuang"
               width={100}
               height={100}
@@ -38,9 +37,9 @@ export const Feedback = () => {
            "
           >
             <div className="flex justify-between items-start pb-4 w-[90%] mx-auto">
-              <Image src={svgs.marks} alt="marks-svg" width={60} height={60} />
+              <Image src="/icons/marks.svg" alt="marks-svg" width={60} height={60} />
               <Image
-                src={svgs.ferHerrera}
+                src={ferHerrera.image}
                 alt="ferHerrera"
                 width={100}
                 height={100}
@@ -57,9 +56,9 @@ export const Feedback = () => {
           </div>
           <div className="grid bg-[#0653AC] py-3 px-4">
             <div className="flex justify-between items-start pb-4 w-[90%] mx-auto">
-              <Image src={svgs.marks} alt="marks-svg" width={60} height={60} />
+              <Image src="/icons/marks.svg" alt="marks-svg" width={60} height={60} />
               <Image
-                src={svgs.alvaroFelipe}
+                src={alvaroFelipe.image}
                 alt="alvaroFelipe"
                 width={100}
                 height={100}
