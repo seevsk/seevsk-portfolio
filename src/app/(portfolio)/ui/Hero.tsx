@@ -6,9 +6,9 @@ export const Hero = () => {
     <>
       <section
         id="home"
-        className="bg-hero relative pt-50 pb-16
+        className="bg-hero relative min-h-dvh pt-50 pb-16
         sm:pt-26
-        md:flex md:flex-col md:items-center md:justify-center md:min-h-screen md:pt-0"
+        md:flex md:flex-col md:items-center md:justify-center md:pt-0"
       >
         <div className="w-[95%] mx-auto md:flex md:flex-col md:items-center">
           <article
