@@ -29,21 +29,19 @@ body {
   font-family: var(--font-sans), sans-serif;
 }
 
+/* Lock page scroll while the mobile hamburger menu (#menu checkbox) is open,
+   so the fixed sidebar and its close icon don't drift out of sync with the
+   page scrolling behind them. */
+body:has(#menu:checked) {
+  overflow: hidden;
+}
+
 @layer utilities {
   .i-open-menu {
     background-image: url('/icons/menu-open.svg');
   }
   .i-close-menu {
     background-image: url('/icons/menu-close.svg');
-  }
-  .clip-square-0{
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.5s ease;
-  }
-  
-  .clip-square-full{
-    clip-path: inset(0 15% 0 0);
-    transition: clip-path 0.5s ease;
   }
   .bg-hero {
     background-image: url('/bg.png')
@@ -56,14 +54,44 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  ul {
-    clip-path: none !important;
-  }
-}
-
 @layer components {
   .bg-hero {
     @apply bg-cover ;
+  }
+
+  /* Navbar (src/components/navbar/Navbar.tsx) — long, multi-breakpoint
+     utility strings pulled out here for readability. See frontend-design
+     skill for when to do this vs. keep classes inline. */
+  .navbar {
+    @apply flex h-20 items-center justify-between mx-auto transition-all duration-300;
+  }
+  .navbar-top {
+    @apply absolute top-0 left-0 w-[95%] text-white;
+  }
+  .navbar-scrolled {
+    @apply md:fixed md:top-0 md:left-0 md:w-full bg-[#171717]/70 md:backdrop-blur-3xl text-[#f8f9fa] shadow-lg z-50;
+  }
+
+  .menu-toggle {
+    @apply w-10 h-10 cursor-pointer bg-contain bg-center bg-transparent rounded-3xl peer-checked/menu:bg-[url('/icons/menu-close.svg')] bg-no-repeat transition-all z-40 ml-auto md:hidden;
+    background-image: url('/icons/menu-open.svg');
+  }
+
+  .menu-backdrop {
+    @apply hidden peer-checked/menu:block fixed inset-0 backdrop-blur-sm z-10 md:hidden;
+  }
+
+  .menu-panel {
+    @apply fixed tracking-widest top-0 right-0 h-full w-[85%] bg-[#f8f9fa] text-slate-900 px-[8%] font-semibold grid auto-rows-max content-start justify-items-start pt-[100px] space-y-[1.1rem] space-x-1 translate-x-full transition-transform duration-500 ease-in-out peer-checked/menu:translate-x-0
+      md:relative md:right-auto md:translate-x-0 md:transition-none md:grid-flow-col md:pt-2 md:px-0 md:bg-transparent md:text-[#f8f9fa] md:content-center md:mx-auto md:justify-center md:items-center md:gap-7 md:w-full md:text-[18px] md:tracking-[0px] md:font-sans z-20
+      lg:text-[18.5px] lg:tracking-[0px] lg:space-x-3;
+  }
+
+  .menu-divider {
+    @apply w-full mt-6 border-t border-slate-300 md:hidden;
+  }
+
+  .menu-copyright {
+    @apply py-5 font-light w-[100%] mx-auto text-center leading-relaxed tracking-wide;
   }
 }
