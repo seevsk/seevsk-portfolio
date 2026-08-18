@@ -31,7 +31,7 @@ export const Hero = () => {
               md:text-[21px] md:tracking-[2.5px]
               lg:tracking-[2.5px]"
             >
-              Desarrollador de Software, Front-end & Aplicaciones
+              Desarrollador de Software Full-Stack & Aplicaciones Moviles
             </h2>
           </article>
           <div

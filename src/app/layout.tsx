@@ -17,23 +17,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sebastian Salas - Desarrollador de Software & Aplicaciones",
+  title: "Sebastian Salas | Desarrollador de Software & Aplicaciones Moviles",
   description:
-    "Desarrollador de Software, especializado en Front-end & Aplicaciones Moviles.",
+    "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
   keywords: [
     "Next.js",
     "Tailwind",
     "Portfolio",
     "Portafolio",
     "React",
-    "seevsk",
-    "seevsk.dev",
     "Sebastian Salas",
   ],
   openGraph: {
-    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones",
+    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones Moviles",
     description:
-      "Desarrollador de Software, especializado en Front-end & Aplicaciones Moviles.",
+      "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
     url: "https://seevsk.dev",
     siteName: "Sebastian Salas | seevsk-dev",
     locale: "es_PE",
