@@ -1,10 +1,9 @@
-import { Feedback } from "./Feedback";
-import { InfoContact } from "./InfoContact";
+import { Feedback } from "./ui/Feedback";
+import { InfoContact } from "./ui/InfoContact";
 
-export const Contact = () => {
+export default function ContactPage() {
   return (
     <section
-      id="contact"
       className="bg-[#101010] max-w-[1580px]
         md:flex md:flex-col md:items-center md:justify-center
         lg:flex-row lg:items-center"
@@ -17,4 +16,4 @@ export const Contact = () => {
       </div>
     </section>
   );
-};
+}

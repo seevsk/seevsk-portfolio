@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Contact } from "./components/Contact";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -39,14 +36,6 @@ export const metadata: Metadata = {
       "Desarrollador de Software, especializado en Front-end & Aplicaciones Moviles.",
     url: "https://seevsk.dev",
     siteName: "Sebastian Salas | seevsk-dev",
-    // images: [
-    //   {
-    //     url: "/og-image.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "icon-tab",
-    //   },
-    // ],
     locale: "es_PE",
     type: "website",
   },
@@ -64,11 +53,8 @@ export default function RootLayout({
       `}
       >
         <div className="mx-auto overflow-hidden max-w-screen-2xl">
-          <Header />
-          <Main />
           {children}
         </div>
-        <Contact />
       </body>
     </html>
   );

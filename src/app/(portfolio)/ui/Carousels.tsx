@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import React from "react";
-import { CarouselAutoplay } from "../tech-client/components/CarouselAutoplay";
+import { CarouselAutoplay } from "@/components/ui/carousel-autoplay";
 import { iconsCarousel } from "@/data/iconsCarousel";
 
 export const Carousels = () => {
