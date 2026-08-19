@@ -77,6 +77,16 @@ body:has(#menu:checked) {
     background-image: url('/icons/menu-open.svg');
   }
 
+  /* Recolor the (white) closed-menu hamburger icon to black on pages with
+     a light background behind the navbar, e.g. /contact — but not while
+     the menu is open: the close ("X") icon then sits over the drawer
+     panel, which is always light, so it needs to stay its own dark color
+     regardless of page and must NOT be inverted. */
+  .menu-toggle-dark {
+    @apply peer-checked/menu:filter-none;
+    filter: invert(1);
+  }
+
   .menu-backdrop {
     @apply hidden peer-checked/menu:block fixed inset-0 backdrop-blur-sm z-10 md:hidden;
   }
