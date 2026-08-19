@@ -93,8 +93,8 @@ body:has(#menu:checked) {
 
   .menu-panel {
     @apply fixed tracking-widest top-0 right-0 h-full w-[85%] bg-[#f8f9fa] text-slate-900 px-[8%] font-semibold grid auto-rows-max content-start justify-items-start pt-[100px] space-y-[1.1rem] space-x-1 translate-x-full transition-transform duration-500 ease-in-out peer-checked/menu:translate-x-0
-      md:relative md:right-auto md:translate-x-0 md:transition-none md:grid-flow-col md:pt-2 md:px-0 md:bg-transparent md:text-[#f8f9fa] md:content-center md:mx-auto md:justify-center md:items-center md:gap-7 md:w-full md:text-[18px] md:tracking-[0px] md:font-sans z-20
-      lg:text-[18.5px] lg:tracking-[0px] lg:space-x-3;
+      md:relative md:right-auto md:translate-x-0 md:transition-none md:grid-flow-col md:pt-2 md:px-0 md:bg-transparent md:text-[#f8f9fa] md:content-center md:mx-auto md:justify-center md:items-center md:gap-4 md:w-full md:text-[16px] md:tracking-[0px] md:font-sans z-20
+      lg:gap-7 lg:text-[18.5px] lg:tracking-[0px] lg:space-x-3;
   }
 
   .menu-divider {

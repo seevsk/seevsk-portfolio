@@ -8,7 +8,7 @@ export const Hero = () => {
         id="home"
         className="bg-hero relative min-h-dvh pt-50 pb-16
         sm:pt-26
-        md:flex md:flex-col md:items-center md:justify-center md:pt-0"
+        md:flex md:flex-col md:items-center md:justify-center md:pt-20"
       >
         <div className="w-[95%] mx-auto md:flex md:flex-col md:items-center">
           <article
