@@ -28,7 +28,7 @@ export const Carousels = () => {
                 <Image
                   src={src}
                   alt={alt}
-                  className="object-cover"
+                  className="object-cover w-[90%] h-auto"
                   width={1280}
                   height={720}
                 />
