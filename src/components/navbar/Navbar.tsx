@@ -6,15 +6,13 @@ import { useEffect, useState } from "react";
 export const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [fixed, setFixed] = useState(!isHome);
+  const isContact = pathname === "/contact";
+  const [fixed, setFixed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
-    if (!isHome) {
-      setFixed(true);
-      return;
-    }
+    if (!isHome) return;
 
     const skills = document.getElementById("skills");
     if (!skills) return;
@@ -34,7 +32,11 @@ export const Navbar = () => {
   }, [isHome]);
   return (
     <>
-      <nav className={`navbar ${fixed ? "navbar-scrolled" : "navbar-top"}`}>
+      <nav
+        className={`navbar ${
+          isHome && fixed ? "navbar-scrolled" : "navbar-top"
+        }`}
+      >
         <input
           type="checkbox"
           id="menu"
@@ -42,7 +44,10 @@ export const Navbar = () => {
           onChange={(e) => setMenuOpen(e.target.checked)}
           className="peer/menu hidden"
         />
-        <label htmlFor="menu" className="menu-toggle"></label>
+        <label
+          htmlFor="menu"
+          className={`menu-toggle ${isContact ? "menu-toggle-dark" : ""}`}
+        ></label>
         <div aria-hidden="true" onClick={closeMenu} className="menu-backdrop"></div>
         <ul className="menu-panel">
           <li className="md:pl-12">
