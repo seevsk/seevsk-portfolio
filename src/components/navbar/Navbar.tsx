@@ -50,7 +50,7 @@ export const Navbar = () => {
         ></label>
         <div aria-hidden="true" onClick={closeMenu} className="menu-backdrop"></div>
         <ul className="menu-panel">
-          <li className="md:pl-12">
+          <li className="md:pl-4 lg:pl-12">
             <Link href="/#home" onClick={closeMenu}>
               {"// Inicio"}
             </Link>
