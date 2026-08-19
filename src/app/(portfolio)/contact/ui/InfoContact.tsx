@@ -14,7 +14,11 @@ export const InfoContact = () => {
         </p>
         <ul className="text-[19px] tracking-[0.5px] space-y-1.5 font-mono font-semibold mb-5">
           <li>
-            <Link href="#" className="inline-flex items-center gap-2">
+            <Link
+              href="https://www.linkedin.com/in/sebasti%C3%A1n-salas/"
+              className="inline-flex items-center gap-2"
+              target="_blank"
+            >
               <IoLogoLinkedin />
               <span className="inline-block border-b-5 border-[#00a6fb] leading-none">
                 LinkedIn
@@ -22,7 +26,11 @@ export const InfoContact = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className="inline-flex items-center gap-2">
+            <Link
+              href="https://github.com/seevsk"
+              className="inline-flex items-center gap-2"
+              target="_blank"
+            >
               <IoLogoGithub />
               <span className="inline-block border-b-5 border-[#891AD5] leading-none">
                 GitHub
@@ -30,7 +38,11 @@ export const InfoContact = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className="inline-flex items-center gap-2">
+            <Link
+              href="https://wa.me/51964707261"
+              className="inline-flex items-center gap-2"
+              target="_blank"
+            >
               <IoLogoWhatsapp />
               <span className="inline-block border-b-5 border-[#65A700] leading-none">
                 WhatsApp
