@@ -22,13 +22,13 @@ export const NextProjectWidget = ({
       className={
         variant === "fixed"
           ? "hidden md:fixed md:bottom-8 md:right-8 md:z-30 md:block"
-          : "-mx-4 mt-14 md:hidden"
+          : "-mx-[2.5vw] mt-14 md:hidden"
       }
     >
       <div
         className={
           variant === "fixed"
-            ? "w-72 rounded-2xl bg-[#f8f9fa] px-6 py-5 text-[#101010] shadow-lg"
+            ? "w-72 rounded-2xl bg-[#f8f9fa] px-6 py-8 text-[#101010] shadow-lg"
             : "w-full bg-[#f8f9fa] px-6 py-8 text-[#101010]"
         }
       >
@@ -36,7 +36,7 @@ export const NextProjectWidget = ({
           <p
             className={
               variant === "fixed"
-                ? "font-mono text-sm font-semibold tracking-[-0.5px]"
+                ? "font-mono text-[15px] font-semibold tracking-[0.2px]"
                 : "font-mono text-base font-semibold tracking-[-0.5px]"
             }
           >
@@ -63,7 +63,7 @@ export const NextProjectWidget = ({
           href={`/project/${nextProject.slug}`}
           className={
             variant === "fixed"
-              ? "mt-2 block font-sans text-xl font-semibold leading-snug"
+              ? "mt-2 block font-sans text-[16px] font-semibold leading-snug"
               : "mt-3 block font-sans text-xl font-semibold leading-snug"
           }
         >
