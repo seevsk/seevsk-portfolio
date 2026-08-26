@@ -22,7 +22,7 @@ export const NextProjectWidget = ({
       className={
         variant === "fixed"
           ? "hidden md:fixed md:bottom-8 md:right-8 md:z-30 md:block"
-          : "-mx-[2.5vw] mt-14 md:hidden"
+          : "-mx-4 mt-14 md:hidden"
       }
     >
       <div
