@@ -64,7 +64,7 @@ export const NextProjectWidget = ({
           className={
             variant === "fixed"
               ? "mt-2 block font-sans text-[16px] font-semibold leading-snug"
-              : "mt-3 block font-sans text-xl font-semibold leading-snug"
+              : "mt-3 block max-w-[290px] font-sans text-xl font-semibold leading-snug"
           }
         >
           {titleMain}
