@@ -94,4 +94,66 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: "kawsay-cross-platform",
+    category: "Windows Desktop & Desarrollo Web",
+    title: "Kawsay – Sistema de Gestión Multiplataforma",
+    breadcrumbTitle: "Kawsay",
+    description:
+      "Sistema de gestión con dos frentes de cliente sobre un modelo de datos compartido en SQL Server. Una aplicación de escritorio (WinForms) para el CRUD de clientes y técnicos, y una capa web (ASP.NET Web Forms) para consultas y transacciones.",
+    fieldLabel: "Proyecto",
+    fieldValue: "Instituto San Ignacio de Loyola | ISIL",
+    technologies: ["C#", "ASP.NET Web Forms", "SQL Server"],
+    projectUrl: "#",
+    images: [
+      {
+        src: "/projects/kawsay-cross-platform/gallery/desktop-login-and-info.png",
+        alt: "desktop-app-login-screen-project-info-panel",
+        width: 1920,
+        height: 1029,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/desktop-main-menu.png",
+        alt: "desktop-app-main-menu-dashboard",
+        width: 1920,
+        height: 1029,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/desktop-client-list.png",
+        alt: "desktop-app-client-list-crud",
+        width: 1920,
+        height: 1030,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/desktop-client-edit-form.png",
+        alt: "desktop-app-edit-client-form",
+        width: 1920,
+        height: 1029,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/web-login.png",
+        alt: "web-app-login-screen",
+        width: 1890,
+        height: 1080,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/web-dashboard.png",
+        alt: "web-app-dashboard-stats-and-charts",
+        width: 1899,
+        height: 1080,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/web-client-history-query.png",
+        alt: "web-app-client-installation-history-query",
+        width: 1900,
+        height: 1080,
+      },
+      {
+        src: "/projects/kawsay-cross-platform/gallery/web-technician-scheduling.png",
+        alt: "web-app-technician-visit-scheduling",
+        width: 1899,
+        height: 1080,
+      },
+    ],
+  },
 ];
