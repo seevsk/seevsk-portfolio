@@ -8,11 +8,12 @@ export const projects = [
     slug: "electoral-management-system",
   },
   {
-    title: "AI Lab Granada",
-    description: "Web Development",
-    image:
-      "https://tamalsen.dev/wp-content/uploads/2021/11/ailabgranada.com-poster.jpg",
+    title: "Kawsay – Sistema de Gestión Multiplataforma",
+    description: "Windows Desktop & Desarrollo Web",
+    image: "/projects/kawsay-cross-platform/cover.png",
+    hoverImage: "/projects/kawsay-cross-platform/cover-hover.png",
     alt: "project-2-image",
+    slug: "kawsay-cross-platform",
   },
   {
     title: "Tryotel – Cross-Platform Travel App",
