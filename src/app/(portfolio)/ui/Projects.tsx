@@ -40,21 +40,21 @@ export const Projects = () => {
                 <Image
                   className={
                     project.hoverImage
-                      ? "absolute inset-0 rounded-t-lg w-full h-full object-cover object-top transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                      : "rounded-t-lg w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.2]"
+                      ? "rounded-t-lg object-cover object-top transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                      : "rounded-t-lg object-cover object-top transition-transform duration-300 group-hover:scale-[1.2]"
                   }
                   src={project.image}
                   alt={project.alt}
-                  width={400}
-                  height={250}
+                  fill
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 60vw"
                 />
                 {project.hoverImage && (
                   <Image
-                    className="absolute inset-0 rounded-t-lg w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+                    className="rounded-t-lg object-cover object-top opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
                     src={project.hoverImage}
                     alt={project.alt}
-                    width={400}
-                    height={250}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 60vw"
                   />
                 )}
               </div>
