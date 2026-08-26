@@ -104,7 +104,7 @@ export const projectDetails: ProjectDetail[] = [
     fieldLabel: "Proyecto",
     fieldValue: "Instituto San Ignacio de Loyola | ISIL",
     technologies: ["C#", "ASP.NET Web Forms", "SQL Server"],
-    projectUrl: "#",
+    projectUrl: "https://github.com/seevsk/kawsay-desktop",
     images: [
       {
         src: "/projects/kawsay-cross-platform/gallery/desktop-login-and-info.png",
