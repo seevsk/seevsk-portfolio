@@ -5,7 +5,7 @@ export type ProjectDetail = {
   breadcrumbTitle: string;
   description: string;
   fieldLabel: string;
-  fieldValue: string;
+  fieldValue: string | { text: string; url?: string }[];
   technologies: string[];
   projectUrl: string;
   images: { src: string; alt: string; width: number; height: number }[];
@@ -26,27 +26,71 @@ export const projectDetails: ProjectDetail[] = [
     images: [
       {
         src: "/projects/electoral-management-system/gallery/citizen-participation.png",
-        alt: "Panel de participación ciudadana con resultados por distrito",
+        alt: "citizen-participation-dashboard-results-by-district",
         width: 1903,
         height: 1913,
       },
       {
         src: "/projects/electoral-management-system/gallery/polling-station.png",
-        alt: "Consulta de local de votación por DNI",
+        alt: "polling-station-lookup-national-id-search",
         width: 1900,
         height: 913,
       },
       {
         src: "/projects/electoral-management-system/gallery/presidential-results.png",
-        alt: "Resultados de la votación presidencial",
+        alt: "presidential-election-results-vote-count-by-candidate",
         width: 1894,
         height: 920,
       },
       {
         src: "/projects/electoral-management-system/gallery/political-parties.png",
-        alt: "Panel administrativo de gestión de partidos políticos",
+        alt: "admin-panel-political-parties-management",
         width: 1910,
         height: 925,
+      },
+    ],
+  },
+  {
+    slug: "nownews-app",
+    category: "Desarrollo Móvil",
+    title: "Now News – Aplicación de Noticias por el Mundo",
+    breadcrumbTitle: "Now News",
+    description:
+      "Aplicación móvil de noticias del mundo, segmentadas por país y categoría (deportes, cultura, política, negocios, entre otras). También incluye un directorio de sedes centrales de medios de noticias, como The New York Times, Toronto Star y Los Angeles Times, con descripción de cada una y su ubicación exacta mediante integración con Google Maps.",
+    fieldLabel: "Proyecto",
+    fieldValue: [
+      { text: "ISIL" },
+      {
+        text: "Behance",
+        url: "https://www.behance.net/gallery/222712151/Now-News-",
+      },
+    ],
+    technologies: ["Kotlin", "PHP", "MySQL"],
+    projectUrl: "https://github.com/seevsk/kotlin-nownews",
+    images: [
+      {
+        src: "/projects/nownews-app/gallery/home-feed.png",
+        alt: "news-feed-home-screen-category-filters",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/article-list.png",
+        alt: "article-list-screen-category-grid",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/category-pages.png",
+        alt: "sports-category-culture-category-politics-category",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/newspaper-locations.png",
+        alt: "newspaper-headquarters-directory-map-view-detail-screen",
+        width: 1920,
+        height: 1080,
       },
     ],
   },

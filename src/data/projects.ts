@@ -22,11 +22,12 @@ export const projects = [
     alt: "project-3-image",
   },
   {
-    title: "Khora – Urban Thinkers Consulting Firm",
-    description: "Web Development",
-    image:
-      "https://tamalsen.dev/wp-content/uploads/2021/07/tryotel_ios_mockup-scaled.jpg",
+    title: "Now News – Aplicación de Noticias por el Mundo",
+    description: "Desarrollo Móvil",
+    image: "/projects/nownews-app/cover.png",
+    hoverImage: "/projects/nownews-app/cover-hover.png",
     alt: "project-4-image",
+    slug: "nownews-app",
   },
   {
     title: "Tapy – Download. Connect. Unlock.",

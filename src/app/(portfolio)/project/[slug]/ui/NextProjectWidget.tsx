@@ -22,7 +22,7 @@ export const NextProjectWidget = ({
       className={
         variant === "fixed"
           ? "hidden md:fixed md:bottom-8 md:right-8 md:z-30 md:block"
-          : "-mx-[2.5vw] mt-14 md:hidden"
+          : "-mx-4 mt-14 md:hidden"
       }
     >
       <div
@@ -64,7 +64,7 @@ export const NextProjectWidget = ({
           className={
             variant === "fixed"
               ? "mt-2 block font-sans text-[16px] font-semibold leading-snug"
-              : "mt-3 block font-sans text-xl font-semibold leading-snug"
+              : "mt-3 block max-w-[290px] font-sans text-xl font-semibold leading-snug"
           }
         >
           {titleMain}
