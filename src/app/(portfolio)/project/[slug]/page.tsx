@@ -35,13 +35,13 @@ export default async function ProjectDetailPage({
   return (
     <PageTransition>
       <section className="w-full overflow-hidden bg-[#101010] pb-20 text-[#EDEDED] md:pb-28">
-        <div className="w-[95%] max-w-[1600px] mx-auto pt-10 md:w-[85%] md:pt-20">
-          <div className="mt-12 md:mt-12 md:max-w-3xl">
+        <div className="px-4 pt-10 md:mx-auto md:w-[85%] md:max-w-[1600px] md:px-0 md:pt-20">
+          <div className="mt-12 md:mt-12 md:max-w-4xl">
             <p className="font-mono text-[15px] tracking-[0.7px] font-normal text-[#bcb8b1] md:text-base md:font-medium md:tracking-[-0.2px]">
               {project.category}
               <span className="text-[#00a6fb] ml-2">•</span>
             </p>
-            <h1 className="mt-3 font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.5px] sm:text-5xl md:text-6xl md:mt-2 lg:text-7xl">
+            <h1 className="mt-3 font-sans text-3xl font-semibold leading-[1.05] tracking-[-0.5px] sm:text-5xl md:text-6xl md:mt-2 lg:text-7xl">
               {project.title}
             </h1>
           </div>
@@ -69,7 +69,25 @@ export default async function ProjectDetailPage({
                     {project.fieldLabel}
                   </h3>
                   <p className="mt-1 font-mono text-sm text-[#bcb8b1] md:text-[15px]">
-                    {project.fieldValue}
+                    {Array.isArray(project.fieldValue)
+                      ? project.fieldValue.map((part, index) => (
+                          <span key={part.text}>
+                            {index > 0 && " | "}
+                            {part.url ? (
+                              <Link
+                                href={part.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline underline-offset-2 transition-colors hover:text-[#EDEDED]"
+                              >
+                                {part.text}
+                              </Link>
+                            ) : (
+                              part.text
+                            )}
+                          </span>
+                        ))
+                      : project.fieldValue}
                   </p>
                 </div>
                 <div className="border-t border-white/15 pt-4">
