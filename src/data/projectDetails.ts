@@ -156,4 +156,48 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: "teslo-shop-platform",
+    category: "Desarrollo Web",
+    title: "TesloShop – Plataforma E-commerce",
+    breadcrumbTitle: "TesloShop",
+    description:
+      "Tienda online que replica la experiencia de compra de un e-commerce real. Desde explorar el catálogo y armar el carrito, hasta completar el pedido con pago integrado a través de PayPal.",
+    fieldLabel: "Proyecto",
+    fieldValue: "Udemy | DevTalles",
+    technologies: ["Next.js", "TypeScript", "Zustand"],
+    projectUrl: "https://github.com/seevsk/e-commerce-nextcart",
+    images: [
+      {
+        src: "/projects/teslo-shop/gallery/men-category-listing.png",
+        alt: "men-category-product-listing",
+        width: 1890,
+        height: 925,
+      },
+      {
+        src: "/projects/teslo-shop/gallery/product-detail-page.png",
+        alt: "product-detail-page-sizes-and-add-to-cart",
+        width: 1890,
+        height: 1704,
+      },
+      {
+        src: "/projects/teslo-shop/gallery/shopping-cart-summary.png",
+        alt: "shopping-cart-order-summary",
+        width: 1890,
+        height: 924,
+      },
+      {
+        src: "/projects/teslo-shop/gallery/checkout-shipping-address.png",
+        alt: "checkout-shipping-address-form",
+        width: 1891,
+        height: 923,
+      },
+      {
+        src: "/projects/teslo-shop/gallery/account-and-admin-menu.png",
+        alt: "account-menu-admin-products-and-users",
+        width: 1890,
+        height: 924,
+      },
+    ],
+  },
 ];

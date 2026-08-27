@@ -16,11 +16,12 @@ export const projects = [
     slug: "kawsay-cross-platform",
   },
   {
-    title: "Tryotel – Cross-Platform Travel App",
-    description: "Mobile Development",
-    image:
-      "https://tamalsen.dev/wp-content/uploads/2021/10/khora-urban-thinkers-poster-r.jpg",
+    title: "TesloShop – Plataforma E-commerce",
+    description: "Desarrollo Web",
+    image: "/projects/teslo-shop/cover.png",
+    hoverImage: "/projects/teslo-shop/cover-hover.png",
     alt: "project-3-image",
+    slug: "teslo-shop-platform",
   },
   {
     title: "Now News – Aplicación de Noticias por el Mundo",
