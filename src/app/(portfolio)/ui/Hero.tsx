@@ -1,7 +1,13 @@
+"use client";
+
 import { Mouse } from "./Mouse";
 import { Carousels } from "./Carousels";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
 
 export const Hero = () => {
+  const { language } = useLanguage();
+
   return (
     <>
       <section
@@ -31,7 +37,7 @@ export const Hero = () => {
               md:text-[21px] md:tracking-[2.5px]
               lg:tracking-[2.5px]"
             >
-              Desarrollador de Software Full-Stack & Aplicaciones Moviles
+              {t(translations.hero.role, language)}
             </h2>
           </article>
           <div
@@ -44,7 +50,7 @@ export const Hero = () => {
               className="uppercase text-sm text-center font-sans mb-2 font-semibold tracking-widest text-gray-400
             sm:text-base md:text-lg"
             >
-              Herramientas y tecnologias
+              {t(translations.hero.toolsHeading, language)}
             </h3>
             <Carousels />
           </div>

@@ -1,7 +1,10 @@
 export const projects = [
   {
     title: "Sistema de Gestión Electoral (Lima Metropolitana)",
+    titleEn: "Electoral Management System (Metropolitan Lima)",
     description: "Desarrollo Web",
+    descriptionEn: "Web Development",
+    category: "web",
     image: "/projects/electoral-management-system/cover.png",
     hoverImage: "/projects/electoral-management-system/cover-hover.png",
     alt: "project-1-image",
@@ -9,7 +12,10 @@ export const projects = [
   },
   {
     title: "Kawsay – Sistema de Gestión Multiplataforma",
+    titleEn: "Kawsay – Cross-Platform Management System",
     description: "Windows Desktop & Desarrollo Web",
+    descriptionEn: "Windows Desktop & Web Development",
+    category: "web",
     image: "/projects/kawsay-cross-platform/cover.png",
     hoverImage: "/projects/kawsay-cross-platform/cover-hover.png",
     alt: "project-2-image",
@@ -17,7 +23,10 @@ export const projects = [
   },
   {
     title: "TesloShop – Plataforma E-commerce",
+    titleEn: "TesloShop – E-commerce Platform",
     description: "Desarrollo Web",
+    descriptionEn: "Web Development",
+    category: "web",
     image: "/projects/teslo-shop/cover.png",
     hoverImage: "/projects/teslo-shop/cover-hover.png",
     alt: "project-3-image",
@@ -25,7 +34,10 @@ export const projects = [
   },
   {
     title: "Now News – Aplicación de Noticias por el Mundo",
+    titleEn: "Now News – World News App",
     description: "Desarrollo Móvil",
+    descriptionEn: "Mobile Development",
+    category: "movil",
     image: "/projects/nownews-app/cover.png",
     hoverImage: "/projects/nownews-app/cover-hover.png",
     alt: "project-4-image",
@@ -33,7 +45,10 @@ export const projects = [
   },
   {
     title: "NewsHub - Aplicación de Noticias, Eventos y Estilo de Vida",
-    description: "Desarrollo Movil",
+    titleEn: "NewsHub - News, Events and Lifestyle App",
+    description: "Desarrollo Móvil",
+    descriptionEn: "Mobile Development",
+    category: "movil",
     image: "/projects/newshub-app/cover.png",
     hoverImage: "/projects/newshub-app/cover-hover.png",
     alt: "project-5-image",

@@ -1,28 +1,33 @@
 import { z } from "zod";
+import type { Language } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
 
-export const contactFormSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(2, "Ingresa tu nombre completo.")
-    .max(80, "El nombre es demasiado largo."),
-  email: z
-    .string()
-    .trim()
-    .min(1, "Ingresa tu email.")
-    .email("Ingresa un email valido."),
-  subject: z
-    .string()
-    .trim()
-    .min(5, "Cuentame brevemente el asunto.")
-    .max(120, "El asunto es demasiado largo."),
-  message: z
-    .string()
-    .trim()
-    .min(20, "El mensaje es muy corto, dame un poco mas de contexto.")
-    .max(2000, "El mensaje es demasiado largo."),
-});
+export const getContactFormSchema = (language: Language) =>
+  z.object({
+    name: z
+      .string()
+      .trim()
+      .min(2, t(translations.contactValidation.nameRequired, language))
+      .max(80, t(translations.contactValidation.nameTooLong, language)),
+    email: z
+      .string()
+      .trim()
+      .min(1, t(translations.contactValidation.emailRequired, language))
+      .email(t(translations.contactValidation.emailInvalid, language)),
+    subject: z
+      .string()
+      .trim()
+      .min(5, t(translations.contactValidation.subjectTooShort, language))
+      .max(120, t(translations.contactValidation.subjectTooLong, language)),
+    message: z
+      .string()
+      .trim()
+      .min(20, t(translations.contactValidation.messageTooShort, language))
+      .max(2000, t(translations.contactValidation.messageTooLong, language)),
+  });
 
-export type ContactFormValues = z.infer<typeof contactFormSchema>;
+export type ContactFormValues = z.infer<
+  ReturnType<typeof getContactFormSchema>
+>;
 
 export type ContactFormField = keyof ContactFormValues;

@@ -5,7 +5,7 @@ import { HiChevronDoubleDown } from "react-icons/hi2";
 
 export const Mouse = () => {
   const handleClick = () => {
-    const skillsSection = document.getElementById("skills-exp");
+    const skillsSection = document.getElementById("experience");
     if (skillsSection) {
       skillsSection.scrollIntoView({ behavior: "smooth" });
     }

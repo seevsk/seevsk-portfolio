@@ -2,9 +2,11 @@
 
 import { Resend } from "resend";
 import {
-  contactFormSchema,
+  getContactFormSchema,
   type ContactFormField,
 } from "@/lib/validations/contact";
+import type { Language } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
@@ -17,6 +19,8 @@ export async function sendContactMessage(
   _prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
+  const language: Language = formData.get("language") === "en" ? "en" : "es";
+
   const raw = {
     name: String(formData.get("name") ?? ""),
     email: String(formData.get("email") ?? ""),
@@ -27,10 +31,13 @@ export async function sendContactMessage(
   // Honeypot: real visitors never see or fill this hidden field. If it
   // comes back non-empty, silently report success so the bot moves on.
   if (formData.get("company")) {
-    return { status: "success", message: "Mensaje enviado. Te respondere pronto." };
+    return {
+      status: "success",
+      message: t(translations.contactActions.sendSuccess, language),
+    };
   }
 
-  const parsed = contactFormSchema.safeParse(raw);
+  const parsed = getContactFormSchema(language).safeParse(raw);
 
   if (!parsed.success) {
     const fieldErrors: ContactFormState["fieldErrors"] = {};
@@ -40,7 +47,7 @@ export async function sendContactMessage(
     }
     return {
       status: "error",
-      message: "Revisa los campos marcados.",
+      message: t(translations.contactActions.fieldErrorsPrompt, language),
       fieldErrors,
       values: raw,
     };
@@ -56,7 +63,7 @@ export async function sendContactMessage(
     );
     return {
       status: "error",
-      message: "El formulario no esta disponible en este momento.",
+      message: t(translations.contactActions.formUnavailable, language),
       values: raw,
     };
   }
@@ -76,8 +83,7 @@ export async function sendContactMessage(
       console.error("Resend error", error);
       return {
         status: "error",
-        message:
-          "No se pudo enviar el mensaje. Intenta de nuevo en unos minutos o escribime directo por WhatsApp/LinkedIn.",
+        message: t(translations.contactActions.sendFailed, language),
         values: raw,
       };
     }
@@ -85,11 +91,13 @@ export async function sendContactMessage(
     console.error("Failed to send contact email", error);
     return {
       status: "error",
-      message:
-        "No se pudo enviar el mensaje. Intenta de nuevo en unos minutos o escribime directo por WhatsApp/LinkedIn.",
+      message: t(translations.contactActions.sendFailed, language),
       values: raw,
     };
   }
 
-  return { status: "success", message: "Mensaje enviado. Te respondere pronto." };
+  return {
+    status: "success",
+    message: t(translations.contactActions.sendSuccess, language),
+  };
 }
