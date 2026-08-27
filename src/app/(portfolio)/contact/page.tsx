@@ -1,5 +1,6 @@
 import { InfoContact } from "./ui/InfoContact";
 import { ContactForm } from "./ui/ContactForm";
+import { Footer } from "../ui/Footer";
 import { PageTransition } from "@/components/page-transition/PageTransition";
 
 export default function ContactPage() {
@@ -19,6 +20,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </PageTransition>
   );
 }

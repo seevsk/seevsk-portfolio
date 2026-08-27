@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
+import { Fragment } from "react";
 import { skills } from "@/data/skills";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
 
 export const Skills = () => {
+  const { language } = useLanguage();
+
   return (
     <section
       id="skills"
@@ -11,13 +18,13 @@ export const Skills = () => {
     lg:max-w-[1070px] lg:min-h-screen"
     >
       <h2
-        id="skills-exp"
+        id="experience"
         className="text-5xl text-center font-mono font-extrabold tracking-[-0.5px]
       sm:text-6xl sm:tracking-[0.5px]
       md:sm:tracking-[0px] md:pt-28 md:mt-17
       lg:pt-27"
       >
-        Areas de Experiencia
+        {t(translations.skills.heading, language)}
       </h2>
       <div>
         <article className="mt-12 font-mono grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
@@ -42,23 +49,28 @@ export const Skills = () => {
                 md:text-2xl md:tracking-[0.1px]"
                 >
                   {item.title.split(" ").map((word, wordIndex) => (
-                    <span key={wordIndex} className="inline-flex">
-                      <span
-                        className={
-                          word === item.underlinedWord
-                            ? item.underlineColor
-                            : ""
-                        }
-                      >
-                        {word}
+                    <Fragment key={wordIndex}>
+                      <span className="inline-flex">
+                        <span
+                          className={
+                            word === item.underlinedWord
+                              ? item.underlineColor
+                              : ""
+                          }
+                        >
+                          {word}
+                        </span>
+                        &thinsp;
                       </span>
-                      &thinsp;
-                    </span>
+                      {item.underlinedWord === "Mobile" && word === "Dev" && (
+                        <br className="hidden md:block" />
+                      )}
+                    </Fragment>
                   ))}
                 </h3>
               </div>
               <p className="mt-5 font-sans font-ligth tracking-[1.5px] text-[17px] text-left">
-                {item.description}
+                {language === "en" ? item.descriptionEn : item.description}
               </p>
             </div>
           ))}

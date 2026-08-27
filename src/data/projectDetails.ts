@@ -1,11 +1,15 @@
 export type ProjectDetail = {
   slug: string;
   category: string;
+  categoryEn: string;
   title: string;
+  titleEn: string;
   breadcrumbTitle: string;
+  breadcrumbTitleEn: string;
   description: string;
-  fieldLabel: string;
+  descriptionEn: string;
   fieldValue: string | { text: string; url?: string }[];
+  fieldValueEn?: string | { text: string; url?: string }[];
   technologies: string[];
   projectUrl: string;
   images: { src: string; alt: string; width: number; height: number }[];
@@ -15,12 +19,17 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: "electoral-management-system",
     category: "Desarrollo web",
+    categoryEn: "Web Development",
     title: "Sistema de Gestión Electoral (Lima Metropolitana)",
+    titleEn: "Electoral Management System (Metropolitan Lima)",
     breadcrumbTitle: "Sistema de Gestión Electoral",
+    breadcrumbTitleEn: "Electoral Management System",
     description:
       "Sistema de gestión electoral para Lima Metropolitana. Abarca el registro de votantes, la activación de cuentas, la emisión del voto presidencial y la visualización automática de los resultados en los 43 distritos.",
-    fieldLabel: "Proyecto",
+    descriptionEn:
+      "Electoral management system for Metropolitan Lima. It covers voter registration, account activation, casting the presidential vote, and the automatic display of results across the 43 districts.",
     fieldValue: "Instituto San Ignacio de Loyola | ISIL",
+    fieldValueEn: "Institute San Ignacio de Loyola | ISIL",
     technologies: ["Spring Boot", "Thymeleaf", "Spring Security"],
     projectUrl: "https://github.com/seevsk/electoral-management-system",
     images: [
@@ -51,58 +60,19 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
-    slug: "nownews-app",
-    category: "Desarrollo Móvil",
-    title: "Now News – Aplicación de Noticias por el Mundo",
-    breadcrumbTitle: "Now News",
-    description:
-      "Aplicación móvil de noticias del mundo, segmentadas por país y categoría (deportes, cultura, política, negocios, entre otras). También incluye un directorio de sedes centrales de medios de noticias, como The New York Times, Toronto Star y Los Angeles Times, con descripción de cada una y su ubicación exacta mediante integración con Google Maps.",
-    fieldLabel: "Proyecto",
-    fieldValue: [
-      { text: "ISIL" },
-      {
-        text: "Behance",
-        url: "https://www.behance.net/gallery/222712151/Now-News-",
-      },
-    ],
-    technologies: ["Kotlin", "PHP", "MySQL"],
-    projectUrl: "https://github.com/seevsk/kotlin-nownews",
-    images: [
-      {
-        src: "/projects/nownews-app/gallery/home-feed.png",
-        alt: "news-feed-home-screen-category-filters",
-        width: 1920,
-        height: 1080,
-      },
-      {
-        src: "/projects/nownews-app/gallery/article-list.png",
-        alt: "article-list-screen-category-grid",
-        width: 1920,
-        height: 1080,
-      },
-      {
-        src: "/projects/nownews-app/gallery/category-pages.png",
-        alt: "sports-category-culture-category-politics-category",
-        width: 1920,
-        height: 1080,
-      },
-      {
-        src: "/projects/nownews-app/gallery/newspaper-locations.png",
-        alt: "newspaper-headquarters-directory-map-view-detail-screen",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-  },
-  {
     slug: "kawsay-cross-platform",
     category: "Windows Desktop & Desarrollo Web",
+    categoryEn: "Windows Desktop & Web Development",
     title: "Kawsay – Sistema de Gestión Multiplataforma",
+    titleEn: "Kawsay – Cross-Platform Management System",
     breadcrumbTitle: "Kawsay",
+    breadcrumbTitleEn: "Kawsay",
     description:
       "Sistema de gestión con dos frentes de cliente sobre un modelo de datos compartido en SQL Server. Una aplicación de escritorio (WinForms) para el CRUD de clientes y técnicos, y una capa web (ASP.NET Web Forms) para consultas y transacciones.",
-    fieldLabel: "Proyecto",
+    descriptionEn:
+      "Management system with two client fronts over a shared SQL Server data model. A desktop application (WinForms) for client and technician CRUD, and a web layer (ASP.NET Web Forms) for queries and transactions.",
     fieldValue: "Instituto San Ignacio de Loyola | ISIL",
+    fieldValueEn: "Institute San Ignacio de Loyola | ISIL",
     technologies: ["C#", "ASP.NET Web Forms", "SQL Server"],
     projectUrl: "https://github.com/seevsk/kawsay-desktop",
     images: [
@@ -159,11 +129,15 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: "teslo-shop-platform",
     category: "Desarrollo Web",
+    categoryEn: "Web Development",
     title: "TesloShop – Plataforma E-commerce",
+    titleEn: "TesloShop – E-commerce Platform",
     breadcrumbTitle: "TesloShop",
+    breadcrumbTitleEn: "TesloShop",
     description:
       "Tienda online que replica la experiencia de compra de un e-commerce real. Desde explorar el catálogo y armar el carrito, hasta completar el pedido con pago integrado a través de PayPal.",
-    fieldLabel: "Proyecto",
+    descriptionEn:
+      "Online store that replicates the shopping experience of a real e-commerce site. From browsing the catalog and building the cart, to completing checkout with payment integrated through PayPal.",
     fieldValue: "Udemy | DevTalles",
     technologies: ["Next.js", "TypeScript", "Zustand"],
     projectUrl: "https://github.com/seevsk/e-commerce-nextcart",
@@ -201,14 +175,67 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
+    slug: "nownews-app",
+    category: "Desarrollo Móvil",
+    categoryEn: "Mobile Development",
+    title: "Now News – Aplicación de Noticias por el Mundo",
+    titleEn: "Now News – World News App",
+    breadcrumbTitle: "Now News",
+    breadcrumbTitleEn: "Now News",
+    description:
+      "Aplicación móvil de noticias del mundo, segmentadas por país y categoría (deportes, cultura, política, negocios, entre otras). También incluye un directorio de sedes centrales de medios de noticias, como The New York Times, Toronto Star y Los Angeles Times, con descripción de cada una y su ubicación exacta mediante integración con Google Maps.",
+    descriptionEn:
+      "Mobile news app covering world news, segmented by country and category (sports, culture, politics, business, among others). It also includes a directory of news outlet headquarters, such as The New York Times, Toronto Star and Los Angeles Times, with a description of each one and its exact location through Google Maps integration.",
+    fieldValue: [
+      { text: "ISIL" },
+      {
+        text: "Behance",
+        url: "https://www.behance.net/gallery/222712151/Now-News-",
+      },
+    ],
+    technologies: ["Kotlin", "PHP", "MySQL"],
+    projectUrl: "https://github.com/seevsk/kotlin-nownews",
+    images: [
+      {
+        src: "/projects/nownews-app/gallery/home-feed.png",
+        alt: "news-feed-home-screen-category-filters",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/article-list.png",
+        alt: "article-list-screen-category-grid",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/category-pages.png",
+        alt: "sports-category-culture-category-politics-category",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/nownews-app/gallery/newspaper-locations.png",
+        alt: "newspaper-headquarters-directory-map-view-detail-screen",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+  },
+  {
     slug: "newshub-app",
     category: "Desarrollo Movil",
+    categoryEn: "Mobile Development",
     title: "NewsHub - Aplicación de Noticias, Eventos y Estilo de Vida",
+    titleEn: "NewsHub - News, Events and Lifestyle App",
     breadcrumbTitle: "NewsHub",
+    breadcrumbTitleEn: "NewsHub",
     description:
       "Aplicación de noticias que centraliza la actualidad global y contenido local de Lima en un solo lugar. Desde titulares internacionales hasta eventos, seminarios y espacios de la ciudad, con un directorio de instalaciones que incluye ubicación en mapa mediante Google Maps. Cliente iOS nativo desarrollado en SwiftUI, consumiendo una API REST propia construida en PHP.",
-    fieldLabel: "Proyecto",
+    descriptionEn:
+      "News app that centralizes global current events and local Lima content in one place. From international headlines to events, seminars and city venues, with a facilities directory that includes map location through Google Maps. Native iOS client built with SwiftUI, consuming a custom REST API built in PHP.",
     fieldValue: "Instituto San Ignacio de Loyola | ISIL",
+    fieldValueEn: "Institute San Ignacio de Loyola | ISIL",
     technologies: ["SwiftUI", "PHP", "MySQL"],
     projectUrl: "https://github.com/inewshub/ios",
     images: [

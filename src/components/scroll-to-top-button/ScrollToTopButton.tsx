@@ -1,0 +1,43 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
+
+export const ScrollToTopButton = ({
+  desktopVisible = false,
+}: {
+  desktopVisible?: boolean;
+}) => {
+  const { language } = useLanguage();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 400);
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToTop}
+      aria-label={t(translations.projectDetail.scrollToTopAria, language)}
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
+      className={`fixed bottom-6 right-6 z-30 flex h-12 w-12 items-center justify-center bg-[#f8f9fa] text-[#891AD5] shadow-lg transition-all duration-300 hover:bg-white ${
+        desktopVisible ? "" : "md:hidden"
+      } ${visible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+    >
+      <ArrowUp size={20} />
+    </button>
+  );
+};

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
+import { CustomCursor } from "@/components/custom-cursor/CustomCursor";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -17,9 +19,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sebastian Salas | Desarrollador de Software & Aplicaciones Moviles",
+  title: "Sebastian Salas | Desarrollador de Software & Aplicaciones Móviles",
   description:
-    "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
+    "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Móviles.",
   keywords: [
     "Next.js",
     "Tailwind",
@@ -29,9 +31,9 @@ export const metadata: Metadata = {
     "Sebastian Salas",
   ],
   openGraph: {
-    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones Moviles",
+    title: "Sebastian Salas - Desarrollador de Software & Aplicaciones Móviles",
     description:
-      "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Moviles.",
+      "Desarrollador Full-Stack, especializado en Backend, Frontend y Aplicaciones Móviles.",
     url: "https://seevsk.dev",
     siteName: "Sebastian Salas | seevsk-dev",
     locale: "es_PE",
@@ -50,9 +52,12 @@ export default function RootLayout({
         className={`${poppins.variable} ${inter.variable} antialiased
       `}
       >
-        <div className="mx-auto overflow-hidden max-w-screen-2xl">
-          {children}
-        </div>
+        <LanguageProvider>
+          <div className="relative mx-auto overflow-hidden max-w-screen-2xl">
+            {children}
+          </div>
+          <CustomCursor />
+        </LanguageProvider>
       </body>
     </html>
   );

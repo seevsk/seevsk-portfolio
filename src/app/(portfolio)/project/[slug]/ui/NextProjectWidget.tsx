@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projectDetails } from "@/data/projectDetails";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations, t } from "@/data/translations";
 
 export const NextProjectWidget = ({
   currentSlug,
@@ -9,12 +13,15 @@ export const NextProjectWidget = ({
   currentSlug: string;
   variant: "fixed" | "inline";
 }) => {
+  const { language } = useLanguage();
+  const isEn = language === "en";
   const total = projectDetails.length;
   const currentIndex = projectDetails.findIndex((p) => p.slug === currentSlug);
   const prevProject = projectDetails[(currentIndex - 1 + total) % total];
   const nextProject = projectDetails[(currentIndex + 1) % total];
-  const titleMatch = nextProject.title.match(/^(.+?)\s*(\(.+\))$/);
-  const titleMain = titleMatch ? titleMatch[1] : nextProject.title;
+  const nextTitle = isEn ? nextProject.titleEn : nextProject.title;
+  const titleMatch = nextTitle.match(/^(.+?)\s*(\(.+\))$/);
+  const titleMain = titleMatch ? titleMatch[1] : nextTitle;
   const titleSuffix = titleMatch ? titleMatch[2] : null;
 
   return (
@@ -40,20 +47,20 @@ export const NextProjectWidget = ({
                 : "font-mono text-base font-semibold tracking-[-0.5px]"
             }
           >
-            Siguiente Proyecto
+            {t(translations.projectDetail.nextProjectLabel, language)}
           </p>
           <div className="flex items-center gap-2">
             <Link
               href={`/project/${prevProject.slug}`}
-              aria-label="Proyecto anterior"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#101010]/5 transition-colors hover:bg-[#101010]/10"
+              aria-label={t(translations.projectDetail.prevProjectAria, language)}
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#101010]/5 transition-colors hover:bg-[#101010]/10 hover:text-[#ff206e]/90"
             >
               <ArrowLeft size={16} />
             </Link>
             <Link
               href={`/project/${nextProject.slug}`}
-              aria-label="Siguiente proyecto"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#101010]/5 transition-colors hover:bg-[#101010]/10"
+              aria-label={t(translations.projectDetail.nextProjectAria, language)}
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#101010]/5 transition-colors hover:bg-[#101010]/10 hover:text-[#ff206e]/90"
             >
               <ArrowRight size={16} />
             </Link>
