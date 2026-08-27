@@ -14,10 +14,10 @@ export const Projects = () => {
         <FilterNav />
 
         <article
-          className="grid gap-7 mt-8 space-y-3
+          className="grid gap-7 mt-8
     grid-cols-1
-    sm:grid-cols-1 sm:space-y-3.5
-    md:grid-cols-2 md:space-x-2.5
+    sm:grid-cols-1
+    md:grid-cols-2
     lg:grid-cols-12
     "
         >

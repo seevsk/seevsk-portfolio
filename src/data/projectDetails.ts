@@ -200,4 +200,30 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: "newshub-app",
+    category: "Desarrollo Movil",
+    title: "NewsHub - Aplicación de Noticias, Eventos y Estilo de Vida",
+    breadcrumbTitle: "NewsHub",
+    description:
+      "Aplicación de noticias que centraliza la actualidad global y contenido local de Lima en un solo lugar. Desde titulares internacionales hasta eventos, seminarios y espacios de la ciudad, con un directorio de instalaciones que incluye ubicación en mapa mediante Google Maps. Cliente iOS nativo desarrollado en SwiftUI, consumiendo una API REST propia construida en PHP.",
+    fieldLabel: "Proyecto",
+    fieldValue: "Instituto San Ignacio de Loyola | ISIL",
+    technologies: ["SwiftUI", "PHP", "MySQL"],
+    projectUrl: "https://github.com/inewshub/ios",
+    images: [
+      {
+        src: "/projects/newshub-app/gallery/onboarding-and-lima-feed.png",
+        alt: "onboarding-screen-life-at-lima-feed",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/newshub-app/gallery/events-feed-and-article-detail.png",
+        alt: "events-feed-and-article-detail-screen",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+  },
 ];
