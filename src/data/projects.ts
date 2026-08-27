@@ -32,9 +32,11 @@ export const projects = [
     slug: "nownews-app",
   },
   {
-    title: "Tapy – Download. Connect. Unlock.",
-    description: "Web Development",
-    image: "https://tamalsen.dev/wp-content/uploads/2021/10/tapy-co-poster.jpg",
+    title: "NewsHub - Aplicación de Noticias, Eventos y Estilo de Vida",
+    description: "Desarrollo Movil",
+    image: "/projects/newshub-app/cover.png",
+    hoverImage: "/projects/newshub-app/cover-hover.png",
     alt: "project-5-image",
+    slug: "newshub-app",
   },
 ];
