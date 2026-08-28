@@ -10,13 +10,13 @@ export const Skills = () => {
   const { language } = useLanguage();
 
   return (
-    <section
-      id="skills"
-      className="py-28 max-w-sm mx-auto
-    sm:max-w-[490px]
-    md:max-w-2xl md:min-h-screen
-    lg:max-w-[1070px] lg:min-h-screen"
-    >
+    <section id="skills" className="w-full bg-[#101010] text-[#ededed]">
+      <div
+        className="py-28 max-w-sm mx-auto
+      sm:max-w-[490px]
+      md:max-w-2xl md:min-h-screen
+      lg:max-w-[1070px] lg:min-h-screen"
+      >
       <h2
         id="experience"
         className="text-5xl text-center font-mono font-extrabold tracking-[-0.5px]
@@ -75,6 +75,7 @@ export const Skills = () => {
             </div>
           ))}
         </article>
+      </div>
       </div>
     </section>
   );
