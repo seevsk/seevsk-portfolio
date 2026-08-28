@@ -53,9 +53,7 @@ export default function RootLayout({
       `}
       >
         <LanguageProvider>
-          <div className="relative mx-auto overflow-hidden max-w-screen-2xl">
-            {children}
-          </div>
+          <div className="relative overflow-hidden">{children}</div>
           <CustomCursor />
         </LanguageProvider>
       </body>

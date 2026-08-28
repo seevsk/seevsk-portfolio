@@ -27,9 +27,9 @@ export const Projects = () => {
 
   return (
     <>
-      <section
-        id="projects"
-        className="max-w-[1200px] mx-auto px-4 mb-14
+      <section id="projects" className="w-full bg-[#191919]">
+      <div
+        className="max-w-[1200px] mx-auto px-4 pt-14 pb-14
        md:min-h-screen"
       >
         <FilterNav active={filter} onChange={setFilter} />
@@ -103,6 +103,7 @@ export const Projects = () => {
             ))}
           </AnimatePresence>
         </article>
+      </div>
       </section>
     </>
   );
