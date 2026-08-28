@@ -26,7 +26,8 @@ export const Skills = () => {
         className="text-5xl text-center font-mono font-extrabold tracking-[-0.5px]
       sm:text-6xl sm:tracking-[0.5px]
       md:sm:tracking-[0px] md:pt-28 md:mt-17
-      lg:pt-27"
+      lg:pt-27
+      xl:text-[69px]"
       >
         {t(translations.skills.heading, language)}
       </h2>
@@ -50,7 +51,8 @@ export const Skills = () => {
                 <h3
                   className="text-3xl font-sans font-semibold text-left tracking-[1.2px]
                 sm:text-4xl sm:tracking-[1px]
-                md:text-2xl md:tracking-[0.1px]"
+                md:text-2xl md:tracking-[0.1px]
+                xl:text-[27.6px]"
                 >
                   {item.title.split(" ").map((word, wordIndex) => (
                     <Fragment key={wordIndex}>
@@ -73,7 +75,7 @@ export const Skills = () => {
                   ))}
                 </h3>
               </div>
-              <p className="mt-5 font-sans font-ligth tracking-[1.5px] text-[17px] text-left">
+              <p className="mt-5 font-sans font-ligth tracking-[1.5px] text-[17px] text-left xl:text-[19.55px]">
                 {language === "en" ? item.descriptionEn : item.description}
               </p>
             </div>
