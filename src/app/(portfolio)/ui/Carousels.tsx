@@ -15,7 +15,7 @@ export const Carousels = () => {
       <CarouselAutoplay
         opts={{ loop: true, align: "start", containScroll: "trimSnaps" }}
       >
-        <CarouselPrevious className="relative left-2" />
+        <CarouselPrevious className="relative left-2 border-white bg-[#191919] text-white hover:bg-[#191919]" />
         <div className="flex-1 overflow-hidden">
           <CarouselContent className="px-0 w-full ml-0">
             {iconsCarousel.map(({ src, alt }) => (
@@ -36,7 +36,7 @@ export const Carousels = () => {
             ))}
           </CarouselContent>
         </div>
-        <CarouselNext className="relative right-2" />
+        <CarouselNext className="relative right-2 border-white bg-[#191919] text-white hover:bg-[#191919]" />
       </CarouselAutoplay>
     </>
   );
