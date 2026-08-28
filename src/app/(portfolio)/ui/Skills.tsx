@@ -10,12 +10,16 @@ export const Skills = () => {
   const { language } = useLanguage();
 
   return (
-    <section id="skills" className="w-full bg-[#191919] text-[#ededed]">
+    <section
+      id="skills"
+      className="w-full bg-[#191919] text-[#ededed] xl:flex xl:min-h-screen xl:items-center xl:justify-center"
+    >
       <div
         className="py-28 max-w-sm mx-auto
       sm:max-w-[490px]
       md:max-w-2xl md:min-h-screen
-      lg:max-w-[1070px] lg:min-h-screen"
+      lg:max-w-[1070px] lg:min-h-screen
+      xl:min-h-0"
       >
       <h2
         id="experience"
